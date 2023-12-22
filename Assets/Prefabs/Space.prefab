@@ -52,6 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
+  row: 0
+  col: 0
+  whitePiece: {fileID: 0}
+  whitePieceKing: {fileID: 0}
+  redPiece: {fileID: 0}
+  redPieceKing: {fileID: 0}
+  emptySpace: {fileID: 0}
 --- !u!222 &6784255450158722860
 CanvasRenderer:
   m_ObjectHideFlags: 0

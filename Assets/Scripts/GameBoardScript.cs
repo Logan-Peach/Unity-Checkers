@@ -6,9 +6,15 @@ using UnityEngine;
 public class GameBoardScript : MonoBehaviour
 {
     public int[,] gameBoard;
-    public int selectedRow;
-    public int selectedCol;
-    public int selectedVal;
+    public int selectedRowP;
+    public int selectedColP;
+    public int selectedValP = 0;
+    public bool isKing;
+
+    public int selectedRowOpp;
+    public int selectedColOpp;
+    public int selectedValOpp = 0;
+
     public int currentPlayer;
     
 
@@ -36,6 +42,37 @@ public class GameBoardScript : MonoBehaviour
     private void MakeKing()
     {
 
+    }
+
+    public void TakeTurn()
+    {
+        if (selectedValP == currentPlayer)
+        {
+
+        }
+    }
+
+    public bool IsValidTurn(int row, int col)
+    {
+        for (int rowMove = -1; rowMove < 2; rowMove += 2)
+        {
+            for (int colMove = -1; colMove < 2; colMove += 2)
+            {
+                if (rowMove == -1 && (selectedValP == 2 || isKing == true))
+                {
+                    if (gameBoard[selectedRowP+rowMove, selectedValP+colMove] == 3)
+                    {
+
+                    }
+                }
+
+                else if (rowMove == 1 && (selectedValP == 1 || isKing == true))
+                {
+
+                }
+            }
+        }
+        return false;
     }
 
 

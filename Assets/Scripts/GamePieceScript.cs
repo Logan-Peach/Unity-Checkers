@@ -15,11 +15,13 @@ public class GamePieceScript : MonoBehaviour
     [SerializeField] private Image emptySpace;
     private int pieceColor;
     private Image img;
+    private bool isKing;
 
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
+        isKing = false;
     }
 
     // Update is called once per frame
@@ -32,14 +34,18 @@ public class GamePieceScript : MonoBehaviour
     {
         if (pieceColor == boardScript.currentPlayer)
         {
-            boardScript.selectedRow = row;
-            boardScript.selectedCol = col;
-            boardScript.selectedVal = pieceColor;
+            boardScript.selectedRowP = row;
+            boardScript.selectedColP = col;
+            boardScript.selectedValP = pieceColor;
+            boardScript.isKing = this.isKing;
         }
 
-        if (boardScript.selectedVal == boardScript.currentPlayer)
+        else if (boardScript.selectedValP != 0 && pieceColor != boardScript.currentPlayer && boardScript.IsValidTurn(row, col))
         {
-
+            boardScript.selectedRowOpp = row;
+            boardScript.selectedColOpp = col;
+            boardScript.selectedValOpp = pieceColor;
+            boardScript.TakeTurn();
         }
     }
 }
