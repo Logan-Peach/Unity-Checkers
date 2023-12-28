@@ -54,11 +54,12 @@ MonoBehaviour:
   boardScript: {fileID: 0}
   row: 0
   col: 0
-  whitePiece: {fileID: 0}
-  whitePieceKing: {fileID: 0}
-  redPiece: {fileID: 0}
-  redPieceKing: {fileID: 0}
-  emptySpace: {fileID: 0}
+  whitePiece: {fileID: 21300000, guid: d9c1d6d43a183b1438c478c395a4f8df, type: 3}
+  whitePieceKing: {fileID: 21300000, guid: c9b40f9dd0ae73541b527de3af1184ab, type: 3}
+  redPiece: {fileID: 21300000, guid: 9b93fd12804873d4a8c23f6d0040ecc6, type: 3}
+  redPieceKing: {fileID: 21300000, guid: d793ffe673228a149b08104f517dd28d, type: 3}
+  emptySpace: {fileID: 21300000, guid: 289552d25755cf44d8820dd5b48cb082, type: 3}
+  highlightedSpace: {fileID: 21300000, guid: 93620c10772fd49479cfd569a701b459, type: 3}
 --- !u!222 &6784255450158722860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -140,4 +141,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6787279692388355364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 191029424692560388}
+        m_TargetAssemblyTypeName: GamePieceScript, Assembly-CSharp
+        m_MethodName: Selected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
