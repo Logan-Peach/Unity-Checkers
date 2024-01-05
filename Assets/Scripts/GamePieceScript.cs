@@ -39,7 +39,7 @@ public class GamePieceScript : MonoBehaviour
         if (pieceColor == 2 && isKing) { img.sprite = redPieceKing; }
         if (boardScript.gameBoard[row, col] == 3) { isKing = false; }
 
-        if (boardScript.ValidActions(boardScript.selectedRowP, boardScript.selectedColP).Contains(Tuple.Create(row, col)))
+        if (boardScript.ValidActions(boardScript.selectedRowP, boardScript.selectedColP).Contains(Tuple.Create(row, col)) && StartScript.learningMode)
         {
             img.sprite = highlightedSpace;
         }

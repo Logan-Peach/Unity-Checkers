@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class EndScript : MonoBehaviour
 {
-
     [SerializeField] private Text winnerText;
+
     void Start()
     {
         if (WinnerScript.winner == 1)
@@ -27,6 +27,6 @@ public class EndScript : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

@@ -167,6 +167,18 @@ public class GameBoardScript : MonoBehaviour
         return validActions;
     }
 
+    public void SkipTurn()
+    {
+        if (currentPlayer == 1)
+        {
+            currentPlayer = 2;
+        }
+        else
+        {
+            currentPlayer = 1;
+        }
+    }
+
     //Use to call invoke for a delay before scene changes
     private void LoadNextScene()
     {
